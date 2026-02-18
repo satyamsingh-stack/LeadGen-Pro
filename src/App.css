@@ -1,12 +1,14 @@
 body {
 	margin: 0;
 	font-family: "Poppins", sans-serif;
-	overflow-x: hidden;
+	overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .app {
 	text-align: center;
 	position: relative;
+	max-width: 100%; /* Ensure no element exceeds the viewport width */
+	overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Navbar */
@@ -421,15 +423,62 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-	.card {
-		width: 90%;
+	body {
+		font-size: 14px;
 	}
 
 	.navbar {
-		padding: 15px;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
 	}
 
 	.hero {
-		padding: 70px 20px;
+		padding: 50px 10px;
+	}
+
+	.hero h1 {
+		font-size: 24px;
+	}
+
+	.heroButtons button {
+		width: 100%;
+		margin: 5px 0;
+	}
+
+	.section {
+		padding: 40px 10px;
+	}
+
+	.grid {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.card {
+		width: 100%;
+	}
+
+	.testimonialCard {
+		width: 100%;
+	}
+
+	.form {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.contact {
+		padding: 20px;
+	}
+
+	.footer {
+		font-size: 12px;
+		padding: 10px;
+	}
+
+	.whatsappFloat {
+		right: 10px; /* Adjusted for smaller screens */
+		bottom: 10px; /* Adjusted for smaller screens */
 	}
 }
